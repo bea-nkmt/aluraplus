@@ -160,3 +160,53 @@ font-weight: 400;
 .lista__link a:active {
     color: purple;
 }
+
+/* Responsividade*/
+@media screen and (max-width: 768px) {
+    .container {
+        display: block; /* Muda de Grid para bloco, empilhando os itens */
+        height: auto;   /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    .container__caixa {
+        margin: 0 2em; /* Reduz as margens laterais que eram de 6em */
+    }
+
+    .secundario {
+        margin: 0 2em; /* Reduz a margem de 10em para não esmagar o texto */
+        flex-direction: column; /* Caso use flex, empilha verticalmente */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .descricao__titulo {
+        font-size: 32px; /* Menor para caber na tela do celular */
+    }
+
+    .dispositivos__titulo {
+        font-size: 30px;
+    }
+
+    .secundario__imagem {
+        width: 100%; /* A imagem passa a ocupar toda a largura disponível */
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dispositivos__lista {
+        display: block; /* Empilha os ícones de TV, Computador e Celular */
+    }
+
+    .lista__item {
+        font-size: 24px;
+        margin-bottom: 1em;
+    }
+
+    .rodape__lista {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os links do rodapé pulem para a linha de baixo */
+        justify-content: center;
+        gap: 1em;
+    }
+}
